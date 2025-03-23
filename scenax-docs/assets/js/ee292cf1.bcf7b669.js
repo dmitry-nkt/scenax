@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkscenax_docs=self.webpackChunkscenax_docs||[]).push([[7140],{4562:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/scenax-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

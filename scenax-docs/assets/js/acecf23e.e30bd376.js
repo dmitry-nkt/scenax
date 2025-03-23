@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkscenax_docs=self.webpackChunkscenax_docs||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/scenax-docs/blog","blogTitle":"Blog","authorsListPath":"/scenax-docs/blog/authors"}')}}]);
