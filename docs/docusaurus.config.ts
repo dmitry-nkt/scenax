@@ -6,8 +6,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Scenax',
-  url: 'https://dmitry-nkt.github.io',
-  baseUrl: '/scenax/',         // ← это важно
+  url: 'https://scenax.com',
+  baseUrl: '/',         // ← это важно
 
   organizationName: 'dmitry-nkt',
   projectName: 'scenax',       // ← имя репозитория
