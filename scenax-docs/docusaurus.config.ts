@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Scenax',
   url: 'https://dmitry-nkt.github.io',          // ← твой GitHub username
-  baseUrl: '/scenax-docs/',                     // ← имя репозитория
+  baseUrl: '/scenax/scenax-docs/',                   // ← имя репозитория
 
   organizationName: 'dmitry-nkt',               // ← GitHub username
   projectName: 'scenax-docs',                   // ← GitHub репозиторий для документации
