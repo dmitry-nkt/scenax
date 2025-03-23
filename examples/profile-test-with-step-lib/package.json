@@ -1,0 +1,21 @@
+{
+  "name": "profile-test-with-step-lib-example",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "report": "allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report"
+  },
+  "devDependencies": {
+    "allure-commandline": "^2.33.0",
+    "allure-js-commons": "^3.2.0",
+    "allure-vitest": "^3.2.0",
+    "axios": "^1.8.4",
+    "typescript": "^5.3.3",
+    "vitest": "^3.0.9"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.2"
+  }
+}
