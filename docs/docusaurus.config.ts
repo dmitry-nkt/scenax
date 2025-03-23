@@ -6,11 +6,11 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Scenax',
-  url: 'https://dmitry-nkt.github.io',          // ← твой GitHub username
-  baseUrl: '/scenax/scenax-docs/',                   // ← имя репозитория
+  url: 'https://dmitry-nkt.github.io',
+  baseUrl: '/scenax/',         // ← это важно
 
-  organizationName: 'dmitry-nkt',               // ← GitHub username
-  projectName: 'scenax-docs',                   // ← GitHub репозиторий для документации
+  organizationName: 'dmitry-nkt',
+  projectName: 'scenax',       // ← имя репозитория
 
   trailingSlash: false,
 
