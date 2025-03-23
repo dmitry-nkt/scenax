@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "types": ["vitest/globals"],
+    "baseUrl": "./",
+    "paths": {
+      "@core/*": ["../../src/*"]
+    }
+  },
+  "include": ["./**/*.ts"]
+}

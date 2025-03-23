@@ -1,0 +1,32 @@
+{
+  "name": "scenax",
+  "version": "0.1.0",
+  "description": "A structured DSL layer over official allure-vitest — write readable, scalable API tests with decorators, steps, and TestOps features.",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:ui": "vitest --ui",
+    "lint": "eslint 'src/**/*.ts' 'tests/**/*.ts'",
+    "build": "tsc"
+  },
+  "keywords": [
+    "vitest",
+    "allure",
+    "dsl",
+    "testing",
+    "api-testing",
+    "testops"
+  ],
+  "author": "Dmitry N.",
+  "license": "MIT",
+  "devDependencies": {
+    "allure-js-commons": "^3.2.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "reflect-metadata": "^0.2.2"
+  }
+}
