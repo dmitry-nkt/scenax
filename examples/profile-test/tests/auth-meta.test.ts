@@ -1,6 +1,6 @@
 import axios from 'axios'
-import { Feature, TestCase } from '@core/decorators-with-each'
-import { runTestClass } from '@core/runner/runner-with-each-and-meta'
+import { Feature, TestCase } from '@core/decorators'
+import { runTestClass } from '@core/runner/runner'
 import { step } from '@core/dsl'
 import { Description, Owner, Tag, Severity } from '@core/meta'
 

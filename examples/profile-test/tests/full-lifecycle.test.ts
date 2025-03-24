@@ -1,9 +1,9 @@
 import axios from 'axios'
-import {TestCase} from '@core/decorators-with-each'
+import {TestCase} from '@core/decorators'
 import {Setup, Context} from '@core/lifecycle'
 import {BeforeAll, AfterAll} from '@core/class-hooks'
 import {step, attach} from '@core/dsl'
-import {runTestClass} from '@core/runner/runner-with-each-and-meta-and-hierarchy-and-lifecycle-and-hooks'
+import {runTestClass} from '@core/runner/runner'
 
 class ParametrizedSetupTest {
     @Context()
