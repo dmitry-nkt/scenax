@@ -10,7 +10,7 @@ const TEST_CASES_KEY = Symbol('test:cases')
 const FEATURE_KEY = Symbol('test:feature')
 
 export type TestCaseEntry = {
-  method: string
+  method: string | symbol
   name: string
   meta: TestMeta
   params?: any[]
@@ -26,12 +26,16 @@ function TestCase(name: string, meta: TestMeta = {}) {
 }
 
 // Вложенный декоратор TestCase.each
-TestCase.each = (table: any[][]) => (nameTemplate: string, meta: TestMeta = {}) =>
-    function (target: any, propertyKey: string) {
+TestCase.each = (table: any[][]) => (nameTemplate: string, meta: TestMeta = {}): MethodDecorator =>
+    function (target: any, propertyKey?: string | symbol)  {
       const cases: TestCaseEntry[] = Reflect.getMetadata(TEST_CASES_KEY, target) || []
       for (const row of table) {
         const name = formatTemplate(nameTemplate, row)
-        cases.push({ method: propertyKey, name, meta, params: row })
+        if (propertyKey) {
+          cases.push({ method: propertyKey, name, meta, params: row })
+        } else {
+          throw new Error('Method must be defined');
+        }
       }
       Reflect.defineMetadata(TEST_CASES_KEY, cases, target)
     }

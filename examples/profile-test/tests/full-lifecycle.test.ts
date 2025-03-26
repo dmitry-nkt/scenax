@@ -3,7 +3,7 @@ import {TestCase} from '@core/decorators'
 import {Setup, Context} from '@core/lifecycle'
 import {BeforeAll, AfterAll} from '@core/class-hooks'
 import {step, attach} from '@core/dsl'
-import {runTestClass} from '@core/runner/runner'
+import {runTest} from '@core/runner/runner'
 
 class ParametrizedSetupTest {
     @Context()
@@ -56,4 +56,4 @@ class ParametrizedSetupTest {
     }
 }
 
-runTestClass(ParametrizedSetupTest)
+runTest(ParametrizedSetupTest)

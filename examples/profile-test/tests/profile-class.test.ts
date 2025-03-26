@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { TestCase, Feature } from '@core/decorators'
-import { runTestClass } from '@core/runner/runner'
+import { runTest } from '@core/runner/runner'
 import { step, attach } from '@core/dsl'
 
 @Feature('Профиль')
@@ -61,4 +61,4 @@ class ProfileTests {
     }
 }
 
-runTestClass(ProfileTests)
+runTest(ProfileTests)

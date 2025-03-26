@@ -7,7 +7,7 @@ import { getLifecycleMeta } from '../lifecycle'
 import { getClassHookMethods } from '../class-hooks'
 import 'reflect-metadata'
 
-export function runTestClass(Class: new () => any) {
+export function runTest(Class: new () => any) {
     const instance = new Class()
     const feature = getFeature(instance)
     const testCases: TestCaseEntry[] = getTestCases(instance)

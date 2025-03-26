@@ -1,5 +1,5 @@
 import { Feature, TestCase } from '@core/decorators'
-import { runTestClass } from '@core/runner/runner'
+import { runTest } from '@core/runner/runner'
 import { step, attach } from '@core/dsl'
 import { Setup, Teardown, Inject, Context } from '@core/lifecycle'
 import { Description, Severity, Tag } from '@core/meta'
@@ -42,4 +42,4 @@ class SessionTests {
     }
 }
 
-runTestClass(SessionTests)
+runTest(SessionTests)
