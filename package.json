@@ -1,5 +1,5 @@
 {
-  "name": "scenax",
+  "name": "@scenax/core",
   "version": "0.1.0-rc.0",
   "description": "A structured DSL layer over official allure-vitest — write readable, scalable API tests with decorators, steps, and TestOps features.",
   "main": "src/index.ts",
