@@ -27,7 +27,7 @@
 - `@scenax/core` — движок, не завязанный на Vitest
 - `@scenax/vitest` — адаптер под Vitest
 - `@scenax/playwright` — адаптер под Playwright (и поддержку `test.step(...)`)
-- Возможность автоопределения среды (`vitest`, `playwright`) через `runTestClass()`
+- Возможность автоопределения среды (`vitest`, `playwright`) через `runTest()`
 
 ---
 

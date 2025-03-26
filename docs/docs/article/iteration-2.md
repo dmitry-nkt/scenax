@@ -1,4 +1,4 @@
-# Итерация 2: Классы, декораторы и `runTestClass()`
+# Итерация 2: Классы, декораторы и `runTest()`
 
 ## 🎯 Цель
 
@@ -32,7 +32,7 @@ testCase('Получение профиля', async () => {
 
 ## ✅ Решение — перейти к классам
 
-С помощью декораторов `@Feature`, `@TestCase`, `@Severity` и `runTestClass()` мы превращаем каждый тест в метод, а весь сценарий — в класс.
+С помощью декораторов `@Feature`, `@TestCase`, `@Severity` и `runTest()` мы превращаем каждый тест в метод, а весь сценарий — в класс.
 
 ```ts
 @Feature('Профиль')
@@ -45,7 +45,7 @@ class ProfileTest {
   }
 }
 
-runTestClass(ProfileTest)
+runTest(ProfileTest)
 ```
 
 ---
@@ -54,10 +54,10 @@ runTestClass(ProfileTest)
 
 - Создали декоратор `@TestCase(name, meta)` для метода
 - Добавили `@Feature` и `@Severity`
-- Написали `runTestClass()` — адаптер, который превращает все методы в `test()`
+- Написали `runTest()` — адаптер, который превращает все методы в `test()`
 
 ```ts
-export function runTestClass(clazz) {
+export function runTest(clazz) {
   const instance = new clazz()
   const proto = Object.getPrototypeOf(instance)
 
@@ -96,7 +96,7 @@ class ProfileTest {
   }
 }
 
-runTestClass(ProfileTest)
+runTest(ProfileTest)
 ```
 
 ---

@@ -1,7 +1,7 @@
-import { TestCase } from '@core/decorators-with-each'
+import { TestCase } from '@core/decorators'
 import {Context, Inject, Setup} from '@core/lifecycle'
 import { AccessSteps } from 'steps/access.steps'
-import { runTestClass } from '@core/runner/runner-with-each-and-meta-and-hierarchy-and-lifecycle-and-hooks-and-step-lib'
+import { runTest } from '@core/runner/runner'
 import { runSteps } from '@core/runner/runSteps'
 import {AfterAll, BeforeAll} from "@core/class-hooks";
 import {attach} from "@core/dsl";
@@ -38,10 +38,10 @@ class AccessFlowTest {
         ['guest@example.com', 403],
     ])('Проверка доступа для %s')
     async checkAccess(email: string, status: number) {
-        await runSteps(new AccessSteps(), this.ctx)
+        await runSteps(AccessSteps, this.ctx)
 
         this.ctx.log?.push(`✅ Проверка доступа пройдена: ${email}`)
     }
 }
 
-runTestClass(AccessFlowTest)
+runTest(AccessFlowTest)

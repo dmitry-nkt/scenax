@@ -1,9 +1,9 @@
 import axios from 'axios'
 import { Step } from '@core/step'
-import { AutoRun } from '@core/auto-run'
-import {Context} from "@core/lifecycle";
+import { Scenario } from '@core/scenario'
+import { Context } from "@core/lifecycle";
 
-@AutoRun()
+@Scenario()
 export class AccessSteps {
     @Context()
     ctx!: { email?: string; token?: string; status?: number; log?: string[] }

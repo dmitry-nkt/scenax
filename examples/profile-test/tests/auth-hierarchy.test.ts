@@ -1,6 +1,6 @@
 import axios from 'axios'
-import { Feature, TestCase } from '@core/decorators-with-each'
-import { runTestClass } from '@core/runner/runner-with-each-and-meta-and-hierarchy'
+import { Feature, TestCase } from '@core/decorators'
+import { runTest } from '@core/runner/runner'
 import { step } from '@core/dsl'
 import { Description, Owner, Tag, Severity } from '@core/meta'
 import { Suite, ParentSuite, SubSuite, Layer } from '@core/hierarchy'
@@ -30,4 +30,4 @@ class AuthNegativeTests {
     }
 }
 
-runTestClass(AuthNegativeTests)
+runTest(AuthNegativeTests)

@@ -41,7 +41,7 @@
 Каждый из этих декораторов:
 
 - сохраняет значение в metadata через `reflect-metadata`
-- при запуске в `runTestClass` — применяется к Allure через facade (`allure.description`, `allure.tag`, ...)
+- при запуске в `runTest` — применяется к Allure через facade (`allure.description`, `allure.tag`, ...)
 
 ---
 

@@ -1,14 +1,16 @@
-import { isAutoRun } from '../auto-run'
+import { isScenario } from '../scenario'
 import 'reflect-metadata'
 import { getLifecycleMeta } from '../lifecycle'
 
-export async function runSteps(instance: any, ctx?: any) {
+export async function runSteps(Class: new () => any, ctx?: any) {
+    const instance = new Class()
+
     if (!instance || typeof instance !== 'object') {
-        throw new Error('runSteps: instance must be a valid object')
+        throw new Error('runSteps: Step Class must be a valid')
     }
 
-    if (!isAutoRun(instance)) {
-        throw new Error('runSteps: instance is not marked with @AutoRun')
+    if (!isScenario(instance)) {
+        throw new Error('runSteps: instance is not marked with @Scenario')
     }
 
     const lifecycle = getLifecycleMeta(instance)
