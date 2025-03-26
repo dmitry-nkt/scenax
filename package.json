@@ -1,14 +1,20 @@
 {
   "name": "@scenax/core",
-  "version": "0.1.0-rc.0",
+  "version": "0.1.0-rc.1",
   "description": "A structured DSL layer over official allure-vitest — write readable, scalable API tests with decorators, steps, and TestOps features.",
-  "main": "src/index.ts",
   "type": "module",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
   "scripts": {
     "build": "vite build",
     "test": "vitest run",
